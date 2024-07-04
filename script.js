@@ -19,11 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
      
 gigya.cdp.init({
 
-      apiDomain: 'EU5',
-
-      bUnitId: '4_vuyHuRd8K_y9KrWOKNHd0A',
-
-      appId: 'HIZ_ZYqCQQrOAywJZwT7Bg'
+        apiDomain: 'EU5',
+        bUnitId: '4_2arKfv5bsPsK9ODVBhCJeA',
+        appId: 'HHDD-XdWAy3F82dmfNhegA'
 
   })
 
