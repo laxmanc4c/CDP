@@ -45,15 +45,13 @@ document.addEventListener('DOMContentLoaded', function() {
       });
       
       // Report data to Gigya CDP
-      CDP.report('Registration', reportData);
-      alert('Form submitted successfully!');
+     alert('Form submitted successfully!');
     })
     .catch(function(error) {
       console.error('CDP initialization error:', error);
       alert("Error reporting data to CDP.");
     });
-    
-    // Reset the form after submission
+ 
     this.reset();
   });
 });
