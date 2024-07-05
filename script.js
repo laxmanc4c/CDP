@@ -58,17 +58,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
       CDP.report('Registration', {
 
-        "Email": formData.email,
-
-        "FirstName": formData.firstName,
-
-        "Address": {
-
-          "cupidatat_b": "",
-
-          "essea": 0,
-
-          "City": formData.city
+        "Email": "email",
+    "FirstName": "firstName",
+        "LastName": "lastName",
+    "Address": {
+        "City": "city",
+        "AddressLine1": "address1",
+        "AddressLine2": "address2",
+        "Country": "country",
+        "State": "state",
+        "Pincode": "pincode"
 
         }
 
