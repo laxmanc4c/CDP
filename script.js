@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('registrationForm').addEventListener('submit', function(event) {
     event.preventDefault();  // Prevent the form from submitting normally
- 
+    
     // Gather form data
     const formData = {
       firstName: document.getElementById('firstName').value,
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
       city: document.getElementById('city').value,
       pincode: document.getElementById('pincode').value
     };
- 
+    
     // Initialize Gigya CDP SDK
     gigya.cdp.init({
       apiDomain: 'EU5',
@@ -27,13 +27,13 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(function(sdk) {
       // Store the SDK in a global variable for future use if needed
       window.CDP = sdk;
- 
+      
       // Prepare data for CDP.report function
       const reportData = {
         "Email": formData.email,
         "FirstName": formData.firstName,
         "LastName": formData.lastName,
-        Address: {
+        "Address": {
           "AddressLine1": formData.address1,
           "AddressLine2": formData.address2,
           "Country": formData.country,
@@ -41,14 +41,18 @@ document.addEventListener('DOMContentLoaded', function() {
           "City": formData.city,
           "Pincode": formData.pincode
         }
-      });
+      };
+
+      // Report data to Gigya CDP
+      CDP.report('Registration', reportData);
       alert('Form submitted successfully!');
     })
     .catch(function(error) {
       console.error('CDP initialization error:', error);
       alert("Error reporting data to CDP.");
     });
- 
+    
+    // Reset the form after submission
     this.reset();
   });
 });
