@@ -1,7 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('registrationForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+    event.preventDefault();  // Prevent the form from submitting normally
  
+    // Gather form data
     const formData = {
       firstName: document.getElementById('firstName').value,
       lastName: document.getElementById('lastName').value,
@@ -17,23 +18,27 @@ document.addEventListener('DOMContentLoaded', function() {
       pincode: document.getElementById('pincode').value
     };
  
+    // Initialize Gigya CDP SDK
     gigya.cdp.init({
       apiDomain: 'EU5',
       bUnitId: '4_2arKfv5bsPsK9ODVBhCJeA',
       appId: 'HHDD-XdWAy3F82dmfNhegA'
     })
     .then(function(sdk) {
+      // Store the SDK in a global variable for future use if needed
       window.CDP = sdk;
-      CDP.report('Registration', {
+ 
+      // Prepare data for CDP.report function
+      const reportData = {
         "Email": formData.email,
         "FirstName": formData.firstName,
         "LastName": formData.lastName,
-        "Address": {
+        Address: {
           "AddressLine1": formData.address1,
           "AddressLine2": formData.address2,
-          "City": formData.city,
           "Country": formData.country,
           "State": formData.state,
+          "City": formData.city,
           "Pincode": formData.pincode
         }
       });
@@ -47,5 +52,3 @@ document.addEventListener('DOMContentLoaded', function() {
     this.reset();
   });
 });
-
-has context menu
