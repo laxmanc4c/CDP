@@ -22,7 +22,7 @@ gigya.cdp.init({
         bUnitId: '4_2arKfv5bsPsK9ODVBhCJeA',
         appId: 'HHDD-XdWAy3F82dmfNhegA'
     })
-    .then(function(sdk) { return window.CDP = sdk; });
+    .then(function(sdk) { return window.CDP = sdk;
 
     CDP.report('Registration',
 {
