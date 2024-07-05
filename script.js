@@ -58,16 +58,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
       CDP.report('Registration', {
 
-        "Email": "email",
-    "FirstName": "firstName",
-        "LastName": "lastName",
+        "Email": email,
+    "FirstName": firstName,
+        "LastName": lastName,
     "Address": {
-        "City": "city",
-        "AddressLine1": "address1",
-        "AddressLine2": "address2",
-        "Country": "country",
-        "State": "state",
-        "Pincode": "pincode"
+        "City": city,
+        "AddressLine1": address1,
+        "AddressLine2": address2,
+        "Country": country,
+        "State": state,
+        "Pincode": pincode
 
         }
 
