@@ -1,95 +1,59 @@
 document.addEventListener('DOMContentLoaded', function() {
-
   document.getElementById('registrationForm').addEventListener('submit', function(event) {
-
-    event.preventDefault();
- 
+    event.preventDefault(); // Prevent the form from submitting normally
+    
+    // Gather form data
     const formData = {
-
       firstName: document.getElementById('firstName').value,
-
       lastName: document.getElementById('lastName').value,
-
       contact: document.getElementById('contact').value,
-
       dob: document.getElementById('dob').value,
-
       email: document.getElementById('email').value,
-
       gender: document.getElementById('gender').value,
-
       address1: document.getElementById('address1').value,
-
       address2: document.getElementById('address2').value,
-
       country: document.getElementById('country').value,
-
       state: document.getElementById('state').value,
-
       city: document.getElementById('city').value,
-
       pincode: document.getElementById('pincode').value
-
     };
- 
+    
+    // Initialize Gigya CDP SDK
     gigya.cdp.init({
-
       apiDomain: 'EU5',
-
       bUnitId: '4_2arKfv5bsPsK9ODVBhCJeA',
-
       appId: 'HHDD-XdWAy3F82dmfNhegA'
-
     })
-
     .then(function(sdk) {
-
+      // Store the SDK in a global variable for future use if needed
       window.CDP = sdk;
-
+      
+      // Prepare data for CDP.report function
       CDP.report('Registration', {
-
-        "Email": String(formData.email),
-
-        "FirstName": String(formData.firstName),
-
-        "LastName": String(formData.lastName),
-
+        "Email": formData.email,
+        "FirstName": formData.firstName,
+        "LastName": formData.lastName,
         "Address": {
-
-          "in_b8": 0,
-
-          "City": String(formData.city),
-
-          "AddressLine1": String(formData.address1),
-
-          "AddressLine2": String(formData.address2),
-
-          "Country": String(formData.country),
-
-          "State": String(formData.state),
-
-          "Pincode": String(formData.pincode)
-
+          "in_b8": 0, // Assuming this is a constant value for "in_b8"
+          "City": formData.city,
+          "AddressLine1": formData.address1,
+          "AddressLine2": formData.address2,
+          "Country": formData.country,
+          "State": formData.state,
+          "Pincode": formData.pincode
         }
-
       });
-
+      
+      // Report data to Gigya CDP
+      CDP.report('Registration', reportData);
       alert('Form submitted successfully!');
-
     })
-
     .catch(function(error) {
-
       console.error('CDP initialization error:', error);
-
       alert("Error reporting data to CDP.");
-
     });
- 
+    
+    // Reset the form after submission
     this.reset();
-
   });
-
 });
-
- 
