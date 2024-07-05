@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('registrationForm').addEventListener('submit', function(event) {
-    event.preventDefault();  // Prevent the form from submitting normally
-    
-    // Gather form data
+    event.preventDefault(); 
     const formData = {
       firstName: document.getElementById('firstName').value,
       lastName: document.getElementById('lastName').value,
@@ -17,22 +15,18 @@ document.addEventListener('DOMContentLoaded', function() {
       city: document.getElementById('city').value,
       pincode: document.getElementById('pincode').value
     };
-    
-    // Initialize Gigya CDP SDK
+ 
     gigya.cdp.init({
       apiDomain: 'EU5',
       bUnitId: '4_2arKfv5bsPsK9ODVBhCJeA',
       appId: 'HHDD-XdWAy3F82dmfNhegA'
     })
-    .then(function(sdk) {
-      // Store the SDK in a global variable for future use if needed
+    .then(function(sdk) { 
       window.CDP = sdk;
-      
-      // Prepare data for CDP.report function
-      const reportData = {
-        "Email": formData.email,
-        "FirstName": formData.firstName,
-        "LastName": formData.lastName,
+      CDP.report('Registration form', {
+        "Mail_id": formData.email,
+        "Firstname": formData.firstName,
+        "Lastname": formData.lastName,
         "Address": {
           "AddressLine1": formData.address1,
           "AddressLine2": formData.address2,
@@ -41,18 +35,14 @@ document.addEventListener('DOMContentLoaded', function() {
           "City": formData.city,
           "Pincode": formData.pincode
         }
-      };
-
-      // Report data to Gigya CDP
-      CDP.report('Registration', reportData);
+      });
       alert('Form submitted successfully!');
     })
     .catch(function(error) {
       console.error('CDP initialization error:', error);
       alert("Error reporting data to CDP.");
     });
-    
-    // Reset the form after submission
+ 
     this.reset();
   });
 });
