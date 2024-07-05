@@ -18,26 +18,23 @@ document.addEventListener('DOMContentLoaded', function() {
       };
      
 gigya.cdp.init({
-
         apiDomain: 'EU5',
         bUnitId: '4_2arKfv5bsPsK9ODVBhCJeA',
         appId: 'HHDD-XdWAy3F82dmfNhegA'
+    })
+    .then(function(sdk) { return window.CDP = sdk; });
 
-  })
-
-  .then(function(sdk) { window.CDP = sdk;
-
-      CDP.report('Registration_Form',
-
-          {
-
-              "emailid": email,
-
-              "firstname": firstName
-
-          }
-
-          );
+    CDP.report('Registration',
+{
+    "Email": "email",
+    "FirstName": "firstName",
+    "Address": {
+        "cupidatat_b": "",
+        "essea": 0,
+        "City": "city"
+    }
+}
+);
 
           alert('Form submitted successfully!');
 
