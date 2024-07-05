@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .then(function(sdk) { 
       window.CDP = sdk;
-      CDP.report('Registration form', {
+      CDP.report('Registration', {
         "Mail_id": formData.email,
         "Firstname": formData.firstName,
         "Lastname": formData.lastName,
