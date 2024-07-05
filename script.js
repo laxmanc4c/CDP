@@ -21,18 +21,19 @@ document.addEventListener('DOMContentLoaded', function() {
       bUnitId: '4_2arKfv5bsPsK9ODVBhCJeA',
       appId: 'HHDD-XdWAy3F82dmfNhegA'
     })
-    .then(function(sdk) { 
+    .then(function(sdk) {
       window.CDP = sdk;
       CDP.report('Registration', {
-        "Mail_id": formData.email,
-        "Firstname": formData.firstName,
-        "Lastname": formData.lastName,
+        "Email": formData.email,
+        "FirstName": formData.firstName,
+        "LastName": formData.lastName,
         "Address": {
+          "in_b8": 0,
+          "City": formData.city,
           "AddressLine1": formData.address1,
           "AddressLine2": formData.address2,
           "Country": formData.country,
           "State": formData.state,
-          "City": formData.city,
           "Pincode": formData.pincode
         }
       });
