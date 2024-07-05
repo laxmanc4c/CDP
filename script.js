@@ -1,16 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-
   document.getElementById('registrationForm').addEventListener('submit', function(event) {
-
     event.preventDefault();
-
-    const agreeToShare = confirm("Do you agree to share your profile information?");
-
-    if (!agreeToShare) {
-      alert("You have chosen not to share your profile information.");
-      return;
-    }
-
+ 
     const formData = {
       firstName: document.getElementById('firstName').value,
       lastName: document.getElementById('lastName').value,
@@ -25,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
       city: document.getElementById('city').value,
       pincode: document.getElementById('pincode').value
     };
-
+ 
     gigya.cdp.init({
       apiDomain: 'EU5',
       bUnitId: '4_2arKfv5bsPsK9ODVBhCJeA',
@@ -38,9 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
         "FirstName": formData.firstName,
         "LastName": formData.lastName,
         "Address": {
-          "City": formData.city,
           "AddressLine1": formData.address1,
           "AddressLine2": formData.address2,
+          "City": formData.city,
           "Country": formData.country,
           "State": formData.state,
           "Pincode": formData.pincode
@@ -52,9 +43,9 @@ document.addEventListener('DOMContentLoaded', function() {
       console.error('CDP initialization error:', error);
       alert("Error reporting data to CDP.");
     });
-
+ 
     this.reset();
-
   });
-
 });
+
+has context menu
