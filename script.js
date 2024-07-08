@@ -35,12 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
         "LastName": formData.lastName,
         "Address": {
           "in_b8": 0, // Assuming this is a constant value for "in_b8"
+           "esse59d": false,
           "City": formData.city,
           "AddressLine1": formData.address1,
           "AddressLine2": formData.address2,
           "Country": formData.country,
           "State": formData.state,
-          "Pincode": formData.pincode
+          "Pincode": formData.pincode,
         }
       })
       
