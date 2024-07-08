@@ -34,12 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
         "FirstName": formData.firstName,
         "LastName": formData.lastName,
         "addresses": {
+     
           "City": formData.city,
           "AddressLine1": formData.address1,
           "AddressLine2": formData.address2,
           "Country": formData.country,
           "State": formData.state,
-          "Pincode": formData.pincode
+          "Pincode": formData.pincode,
+           "addressId": "1"
         }
       })
       
