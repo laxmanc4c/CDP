@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
           "AddressLine2": formData.address2,
           "Country": formData.country,
           "State": formData.state,
-          "Pincode": formData.pincode,
+          "Pincode": formData.pincode
         }
       })
       
