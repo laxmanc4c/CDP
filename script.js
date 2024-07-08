@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "Email": formData.email,
         "FirstName": formData.firstName,
         "LastName": formData.lastName,
-        "Address": {
+        "addresses": {
           "in_b8": 0, // Assuming this is a constant value for "in_b8"
            "esse59d": false,
           "City": formData.city,
