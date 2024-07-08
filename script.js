@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
           "State": formData.state,
           "Pincode": formData.pincode
         }
-      });
+      })
       
       // Report data to Gigya CDP
      alert('Form submitted successfully!');
