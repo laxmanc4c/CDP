@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       // Alert and/or other actions upon successful submission
-      alert('Form submitted successfully to Gigya CDP with registration and product details!');
+      alert('Form submitted successfully to Gigya CDP with product details!');
     })
     .catch(function(error) {
       console.error('CDP initialization error:', error);
