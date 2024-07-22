@@ -4,13 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Gather form data
     const formData = {
-      Product Name: document.getElementById('Product Name').value,
-      Product Price: parseFloat(document.getElementById('Product Price').value),
-      Product Quantity: parseInt(document.getElementById('Product Quantity').value),
-      Total Price: parseFloat(document.getElementById('Total Price').value),
+      Productname: document.getElementById('Productname').value,
+      Productprice: parseFloat(document.getElementById('Productprice').value),
+      Productquantity: parseInt(document.getElementById('Productquantity').value),
+      Totalprice: parseFloat(document.getElementById('Totalprice').value),
       UID: document.getElementById('UID').value,
-      Product Id: document.getElementById('Product Id').value,
-      Currency Iso: document.getElementById('Currency Iso').value,
+      Productid: document.getElementById('Productid').value,
+      Currencyiso: document.getElementById('Currencyiso').value,
       Name: document.getElementById('Name').value // Assuming 'Name' here refers to registration name
     };
     
@@ -26,14 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Prepare data for CDP.report function
       CDP.report('Add To Cart', {
-        "Productname": formData.Product Name,
-        "Productprice": formData.Product Price,
-        "Productquantity": formData.Product Quantity,
-        "Totalprice": formData.Total Price,
+        "Productname": formData.Productname,
+        "Productprice": formData.Productprice,
+        "Productquantity": formData.Productquantity,
+        "Totalprice": formData.Totalprice,
         "UID": formData.UID,
-        "Productid": formData.Product Id,
-        "CurrencyIso": formData.Currency Iso,
-        "Name": formData.name // Assuming 'Name' here refers to registration name
+        "Productid": formData.Productid,
+        "CurrencyIso": formData.Currencyiso,
+        "Name": formData.Name // Assuming 'Name' here refers to registration name
       });
 
       // Alert and/or other actions upon successful submission
