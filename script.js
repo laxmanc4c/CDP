@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Gather form data
     const formData = {
-      productname: document.getElementById('productname').value,
-      productprice: parseFloat(document.getElementById('productprice').value),
-      productquantity: parseInt(document.getElementById('productquantity').value),
-      totalprice: parseFloat(document.getElementById('totalprice').value),
-      uid: document.getElementById('uid').value,
-      productid: document.getElementById('productid').value,
-      currencyiso: document.getElementById('currencyiso').value,
-      name: document.getElementById('name').value // Assuming 'Name' here refers to registration name
+      Product Name: document.getElementById('Product Name').value,
+      Product Price: parseFloat(document.getElementById('Product Price').value),
+      Product Quantity: parseInt(document.getElementById('Product Quantity').value),
+      Total Price: parseFloat(document.getElementById('Total Price').value),
+      UID: document.getElementById('UID').value,
+      Product Id: document.getElementById('Product Id').value,
+      Currency Iso: document.getElementById('Currency Iso').value,
+      Name: document.getElementById('Name').value // Assuming 'Name' here refers to registration name
     };
     
     // Initialize Gigya CDP SDK
@@ -26,13 +26,13 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Prepare data for CDP.report function
       CDP.report('Add To Cart', {
-        "Productname": formData.productname,
-        "Productprice": formData.productprice,
-        "Productquantity": formData.productquantity,
-        "Totalprice": formData.totalprice,
-        "UID": formData.uid,
-        "Productid": formData.productid,
-        "CurrencyIso": formData.currencyiso,
+        "Productname": formData.Product Name,
+        "Productprice": formData.Product Price,
+        "Productquantity": formData.Product Quantity,
+        "Totalprice": formData.Total Price,
+        "UID": formData.UID,
+        "Productid": formData.Product Id,
+        "CurrencyIso": formData.Currency Iso,
         "Name": formData.name // Assuming 'Name' here refers to registration name
       });
 
