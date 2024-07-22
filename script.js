@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
       Productname: document.getElementById('Productname').value,
       Productprice: parseFloat(document.getElementById('Productprice').value),
       Productquantity: parseInt(document.getElementById('Productquantity').value),
-      Totalprice: parseFloat(document.getElementById('TotalPrice').value),
+      Totalprice: parseFloat(document.getElementById('Totalprice').value),
       UID: document.getElementById('UID').value,
       Productid: document.getElementById('ProductId').value,
       CurrencyIso: document.getElementById('CurrencyIso').value,
-      Name: document.getElementById('firstName').value // Assuming 'Name' here refers to registration name
+      Name: document.getElementById('Name').value // Assuming 'Name' here refers to registration name
     };
     
     // Initialize Gigya CDP SDK
