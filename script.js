@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
       Productquantity: parseInt(document.getElementById('Productquantity').value),
       Totalprice: parseFloat(document.getElementById('TotalPrice').value),
       UID: document.getElementById('UID').value,
-      Productid: document.getElementById('productId').value,
-      CurrencyIso: document.getElementById('currencyIso').value,
+      Productid: document.getElementById('ProductId').value,
+      CurrencyIso: document.getElementById('CurrencyIso').value,
       Name: document.getElementById('firstName').value // Assuming 'Name' here refers to registration name
     };
     
