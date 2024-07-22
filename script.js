@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
       Productname: document.getElementById('Productname').value,
       Productprice: parseFloat(document.getElementById('Productprice').value),
       Productquantity: parseInt(document.getElementById('Productquantity').value),
-      Totalprice: parseFloat(document.getElementById('totalPrice').value),
+      Totalprice: parseFloat(document.getElementById('TotalPrice').value),
       UID: document.getElementById('UID').value,
-      Productid: document.getElementById('productID').value,
+      Productid: document.getElementById('productId').value,
       CurrencyIso: document.getElementById('currencyIso').value,
       Name: document.getElementById('firstName').value // Assuming 'Name' here refers to registration name
     };
@@ -26,13 +26,13 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Prepare data for CDP.report function
       CDP.report('Add To Cart', {
-        "Productname": formData.Productname,
-        "Productprice": formData.Productprice,
-        "Productquantity": formData.Productquantity,
-        "Totalprice": formData.Totalprice,
+        "Product Name": formData.Productname,
+        "Product Price": formData.Productprice,
+        "Product Quantity": formData.Productquantity,
+        "Total Price": formData.Totalprice,
         "UID": formData.UID,
-        "Productid": formData.Productid,
-        "CurrencyIso": formData.CurrencyIso,
+        "Product Id": formData.Productid,
+        "Currency Iso": formData.CurrencyIso,
         "Name": formData.Name // Assuming 'Name' here refers to registration name
       });
 
