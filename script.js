@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Gather form data
     const formData = {
-      Productname: document.getElementById('Productname').value,
-      Productprice: parseFloat(document.getElementById('Productprice').value),
-      Productquantity: parseInt(document.getElementById('Productquantity').value),
-      Totalprice: parseFloat(document.getElementById('Totalprice').value),
-      UID: document.getElementById('UID').value,
-      Productid: document.getElementById('ProductId').value,
-      CurrencyIso: document.getElementById('CurrencyIso').value,
-      Name: document.getElementById('Name').value // Assuming 'Name' here refers to registration name
+      productname: document.getElementById('productname').value,
+      productprice: parseFloat(document.getElementById('productprice').value),
+      productquantity: parseInt(document.getElementById('productquantity').value),
+      totalprice: parseFloat(document.getElementById('totalprice').value),
+      uid: document.getElementById('uid').value,
+      productid: document.getElementById('productid').value,
+      currencyiso: document.getElementById('currencyiso').value,
+      name: document.getElementById('name').value // Assuming 'Name' here refers to registration name
     };
     
     // Initialize Gigya CDP SDK
@@ -26,14 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Prepare data for CDP.report function
       CDP.report('Add To Cart', {
-        "Product Name": formData.Productname,
-        "Product Price": formData.Productprice,
-        "Product Quantity": formData.Productquantity,
-        "Total Price": formData.Totalprice,
-        "UID": formData.UID,
-        "Product Id": formData.Productid,
-        "Currency Iso": formData.CurrencyIso,
-        "Name": formData.Name // Assuming 'Name' here refers to registration name
+        "Product Name": formData.productname,
+        "Product Price": formData.productprice,
+        "Product Quantity": formData.productquantity,
+        "Total Price": formData.totalprice,
+        "UID": formData.uid,
+        "Product Id": formData.productid,
+        "Currency Iso": formData.currencyiso,
+        "Name": formData.name // Assuming 'Name' here refers to registration name
       });
 
       // Alert and/or other actions upon successful submission
