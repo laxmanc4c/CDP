@@ -26,13 +26,13 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Prepare data for CDP.report function
       CDP.report('Add To Cart', {
-        "Product Name": formData.productname,
-        "Product Price": formData.productprice,
-        "Product Quantity": formData.productquantity,
-        "Total Price": formData.totalprice,
+        "Productname": formData.productname,
+        "Productprice": formData.productprice,
+        "Productquantity": formData.productquantity,
+        "Totalprice": formData.totalprice,
         "UID": formData.uid,
-        "Product Id": formData.productid,
-        "Currency Iso": formData.currencyiso,
+        "Productid": formData.productid,
+        "CurrencyIso": formData.currencyiso,
         "Name": formData.name // Assuming 'Name' here refers to registration name
       });
 
