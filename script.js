@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
       Totalprice: parseFloat(document.getElementById('Totalprice').value),
       UID: document.getElementById('UID').value,
       Productid: document.getElementById('Productid').value,
-      Currencyiso: document.getElementById('Currencyiso').value,
+      CurrencyIso: document.getElementById('CurrencyIso').value,
       Name: document.getElementById('Name').value // Assuming 'Name' here refers to registration name
     };
     
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "Totalprice": formData.Totalprice,
         "UID": formData.UID,
         "Productid": formData.Productid,
-        "CurrencyIso": formData.Currencyiso,
+        "CurrencyIso": formData.CurrencyIso,
         "Name": formData.Name // Assuming 'Name' here refers to registration name
       });
 
