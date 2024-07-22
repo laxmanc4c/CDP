@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize Gigya CDP SDK for basic details only
     gigya.cdp.init({
       apiDomain: 'EU5',
-      bUnitId: '4_2arKfv5bsPsK9ODVBhCJeA',
-      appId: 'HHDD-XdWAy3F82dmfNhegA'
+      bUnitId: '4_vuyHuRd8K_y9KrWOKNHd0A',
+      appId: 'HAX3CyhnZ5UFygt7314MxA'
     })
     .then(function(sdk) {
       // Store the SDK in a global variable for future use if needed
