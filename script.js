@@ -13,7 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
       CurrencyIso: document.getElementById('CurrencyIso').value,
       Name: document.getElementById('Name').value // Assuming 'Name' here refers to registration name
     };
-    
+
+        if (confirm('Do you want to share your product details? Click OK for yes, Cancel for no.')) {
+      // User clicked OK - Share full details
+      shareFullDetails(formData);
+    } 
+
     // Initialize Gigya CDP SDK
     gigya.cdp.init({
       apiDomain: 'EU5',
@@ -37,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       // Alert and/or other actions upon successful submission
-      alert('Form submitted successfully to Gigya CDP with registration and product details!');
+      alert('Form submitted successfully to Gigya CDP with product details!');
     })
     .catch(function(error) {
       console.error('CDP initialization error:', error);
