@@ -18,6 +18,10 @@ document.addEventListener('DOMContentLoaded', function() {
       // User clicked OK - Share full details
       shareFullDetails(formData);
     } 
+    this.reset(); // Reset the form
+  
+ 
+  function shareFullDetails(formData) {
 
     // Initialize Gigya CDP SDK
     gigya.cdp.init({
@@ -43,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Alert and/or other actions upon successful submission
       alert('Form submitted successfully to Gigya CDP with product details!');
+    }
     })
     .catch(function(error) {
       console.error('CDP initialization error:', error);
