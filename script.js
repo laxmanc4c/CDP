@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
       UID: document.getElementById('UID').value,
       Productid: document.getElementById('Productid').value,
       CurrencyIso: document.getElementById('CurrencyIso').value,
-      Name: document.getElementById('firstName').value // Assuming 'Name' here refers to registration name
+      Name: document.getElementById('Name').value // Assuming 'Name' here refers to registration name
     };
     
     // Initialize Gigya CDP SDK
