@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', function() {
       Name: document.getElementById('Name').value // Assuming 'Name' here refers to registration name
     };
 
-        if (confirm('Do you want to share your product details? Click OK for yes')) {
+        if (confirm('Do you want to share your product details? Click OK for yes, Cancel for no.')) {
       // User clicked OK - Share full details
       shareFullDetails(formData);
-    } 
+     
  
   function shareFullDetails(formData) {
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "Name": formData.Name // Assuming 'Name' here refers to registration name
       });
     }
-      // Alert and/or other actions upon successful submission
+          }  // Alert and/or other actions upon successful submission
       alert('Form submitted successfully to Gigya CDP with product details!');
     
     })
