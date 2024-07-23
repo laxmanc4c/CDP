@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
       Productname: document.getElementById('Productname').value,
       Productprice: parseFloat(document.getElementById('Productprice').value),
       Productquantity: parseInt(document.getElementById('Productquantity').value),
-      Totalprice: parseFloat(document.getElementById('TotalPrice').value),
+      Totalprice: parseFloat(document.getElementById('totalPrice').value),
       UID: document.getElementById('UID').value,
       Productid: document.getElementById('Productid').value,
       CurrencyIso: document.getElementById('CurrencyIso').value,
