@@ -7,11 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
       Productname: document.getElementById('Productname').value,
       Productprice: parseFloat(document.getElementById('Productprice').value),
       Productquantity: parseInt(document.getElementById('Productquantity').value),
-      Totalprice: parseFloat(document.getElementById('Totalprice').value),
+      Totalprice: parseFloat(document.getElementById('totalPrice').value),
       UID: document.getElementById('UID').value,
-      Productid: document.getElementById('Productid').value,
+      Productid: document.getElementById('productID').value,
       CurrencyIso: document.getElementById('CurrencyIso').value,
-      Name: document.getElementById('Name').value // Assuming 'Name' here refers to registration name
+      Name: document.getElementById('firstName').value // Assuming 'Name' here refers to registration name
     };
     
     // Initialize Gigya CDP SDK
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
 
       // Alert and/or other actions upon successful submission
-      alert('Form submitted successfully to Gigya CDP with product details!');
+      alert('Form submitted successfully to Gigya CDP with registration and product details!');
     })
     .catch(function(error) {
       console.error('CDP initialization error:', error);
