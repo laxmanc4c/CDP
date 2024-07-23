@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
       CurrencyIso: document.getElementById('CurrencyIso').value,
       Name: document.getElementById('Name').value // Assuming 'Name' here refers to registration name
     };
-
+    
     // Initialize Gigya CDP SDK
     gigya.cdp.init({
       apiDomain: 'EU5',
@@ -35,10 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
         "CurrencyIso": formData.CurrencyIso,
         "Name": formData.Name // Assuming 'Name' here refers to registration name
       });
-    
-           // Alert and/or other actions upon successful submission
-      alert('Form submitted successfully to Gigya CDP with product details!');
-    
+
+      // Alert and/or other actions upon successful submission
+      alert('Form submitted successfully to Gigya CDP with registration and product details!');
     })
     .catch(function(error) {
       console.error('CDP initialization error:', error);
